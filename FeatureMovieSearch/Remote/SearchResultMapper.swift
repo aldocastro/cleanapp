@@ -13,6 +13,8 @@ public class SearchResultMapper: MapperProtocol {
     public typealias From = RemoteSearchResult
     public typealias To = SearchResult
     
+    public init() {}
+    
     public func map(from: RemoteSearchResult) -> SearchResult {
         return SearchResult(title: from.title)
     }

@@ -12,18 +12,16 @@ import RxSwift
 
 public class RemoteMovieRepositoryDataSource: MovieRepositoryDataSourceProtocol {
     
-    private var movieApi : TheMovieDatabaseApi
-    private var searchResultMapper: SearchResultMapper
+    private let searchResultMapper: SearchResultMapper
+    private let provider = MoyaProvider<TheMovieDatabaseApi>()
     
-    public init(movieApi: TheMovieDatabaseApi, searchResultMapper: SearchResultMapper) {
-        self.movieApi = movieApi
+    public init(searchResultMapper: SearchResultMapper) {
         self.searchResultMapper = searchResultMapper
     }
     
     public func searchMoviesByTitle(_ searchText: String) -> Single<Array<SearchResult>> {
-        let provider = MoyaProvider<TheMovieDatabaseApi>()
         return provider.rx.request(.movie(searchText))
-            .map(RemoteSearchResults.self, failsOnEmptyData: false)
+            .map(RemoteSearchResults.self)
             .map{ result -> Array<SearchResult> in
                 return result.results.map { item -> SearchResult in
                     return self.searchResultMapper.map(from: item)

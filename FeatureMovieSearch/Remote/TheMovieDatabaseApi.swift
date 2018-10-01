@@ -14,7 +14,7 @@ public enum TheMovieDatabaseApi {
     case movie(String)
 }
 
-extension TheMovieDatabaseApi:  TargetType {
+extension TheMovieDatabaseApi: TargetType {
     public var baseURL: URL {
         return URL(string: "https://api.themoviedb.org")!
     }

@@ -13,7 +13,7 @@ public class MovieRepository: MovieRepositoryProtocol {
     
     private var remoteDataSource : MovieRepositoryDataSourceProtocol
     
-    init(remoteDataSource: MovieRepositoryDataSourceProtocol) {
+    public init(remoteDataSource: MovieRepositoryDataSourceProtocol) {
         self.remoteDataSource = remoteDataSource
     }
     

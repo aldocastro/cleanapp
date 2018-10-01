@@ -16,7 +16,7 @@ public class SearchMovieByTitleUseCase : UseCaseProtocol {
     
     private var repository : MovieRepositoryProtocol
     
-    init(repository: MovieRepositoryProtocol) {
+    public init(repository: MovieRepositoryProtocol) {
         self.repository = repository
     }
     
