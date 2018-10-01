@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-public protocol UseCase {
+public protocol UseCaseProtocol {
     
     associatedtype Input
     associatedtype Output

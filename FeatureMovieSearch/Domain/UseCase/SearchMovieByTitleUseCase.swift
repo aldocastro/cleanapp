@@ -10,7 +10,7 @@ import Foundation
 import Commons
 import RxSwift
 
-public class SearchMovieByTitleUseCase : UseCase {
+public class SearchMovieByTitleUseCase : UseCaseProtocol {
     public typealias Input = Params
     public typealias Output = Single<Array<SearchResult>>
     
