@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		053C898CC1F80D3767C41296 /* Pods_cleanapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8C683F13ECDC508EC11632 /* Pods_cleanapp.framework */; };
 		49C7AF05FA85B30CC429AF99 /* Pods_FeatureMovieSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5E5BF153A45CA75F746241 /* Pods_FeatureMovieSearchTests.framework */; };
+		6E97F43021610EF700A523D4 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97F42E21610AC900A523D4 /* Injector.swift */; };
 		6E97F43221612E2600A523D4 /* MovieSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E97F43121612E2600A523D4 /* MovieSearchResultCell.xib */; };
 		6E97F43421612E7600A523D4 /* MovieSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97F43321612E7600A523D4 /* MovieSearchResultCell.swift */; };
 		90CF5B8BF638F59401C40A22 /* Pods_cleanappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46602D0456C66BACA4064DFC /* Pods_cleanappTests.framework */; };
@@ -147,6 +148,7 @@
 		5D2ECA8B7AF67F8803A6E35C /* Pods_CommonsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639FC7D19B2889B154BC7A95 /* Pods-FeatureMovieSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeatureMovieSearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeatureMovieSearchTests/Pods-FeatureMovieSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64470D70FE16CDB4EFEECE9A /* Pods-CommonsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommonsTests/Pods-CommonsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E97F42E21610AC900A523D4 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		6E97F43121612E2600A523D4 /* MovieSearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieSearchResultCell.xib; sourceTree = "<group>"; };
 		6E97F43321612E7600A523D4 /* MovieSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchResultCell.swift; sourceTree = "<group>"; };
 		734DF1B8F85BF0A061662681 /* Pods_CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +301,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6E97F42D21610A6300A523D4 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				6E97F42E21610AC900A523D4 /* Injector.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		9645E6B2213D5C1F006192BF = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +344,7 @@
 		9645E6BD213D5C1F006192BF /* cleanapp */ = {
 			isa = PBXGroup;
 			children = (
+				6E97F42D21610A6300A523D4 /* DI */,
 				9645E6BE213D5C1F006192BF /* AppDelegate.swift */,
 				9645E6C5213D5C20006192BF /* Assets.xcassets */,
 				9645E6C7213D5C20006192BF /* LaunchScreen.storyboard */,
@@ -816,6 +827,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9645E747213D5FD5006192BF /* MovieSearchView.xib in Resources */,
+				6E97F43221612E2600A523D4 /* MovieSearchResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,6 +1059,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9645E6BF213D5C1F006192BF /* AppDelegate.swift in Sources */,
+				6E97F43021610EF700A523D4 /* Injector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1305,7 +1318,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RG8ZWURBL;
+				DEVELOPMENT_TEAM = W2V774VD96;
 				INFOPLIST_FILE = cleanapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1325,7 +1338,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RG8ZWURBL;
+				DEVELOPMENT_TEAM = W2V774VD96;
 				INFOPLIST_FILE = cleanapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

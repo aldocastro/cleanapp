@@ -50,7 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     func movieSearchViewController() -> MovieSearchViewController {
-        return FeatureMovieSearchViewControllerFactory.create()
+        let searchMovieByTitleUseCase = Injector.shared.dependencies["SearchMovieByTitleUseCase"] as! SearchMovieByTitleUseCase
+        return FeatureMovieSearchViewControllerFactory.create(searchMovieByTitleUseCase: searchMovieByTitleUseCase)
     }
     
 }
