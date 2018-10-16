@@ -20,15 +20,17 @@ extension TheMovieDatabaseApi: TargetType {
     }
     
     public var path: String {
-        return "/3/search/movie"
+        switch self {
+        case .movie(_):
+            return "/3/search/movie"
+        }
     }
     
     public var method: Moya.Method {
-        return .get
-    }
-    
-    public var sampleData: Data {
-        return Data()
+        switch self {
+        case .movie(_):
+            return .get
+        }
     }
     
     public var task: Task {
@@ -42,8 +44,13 @@ extension TheMovieDatabaseApi: TargetType {
     }
     
     public var headers: [String : String]? {
-        return nil
+        return ["Content-type":"application/json"]
     }
+    
+    public var sampleData: Data {
+        return Data()
+    }
+    
 }
 
 private extension String {

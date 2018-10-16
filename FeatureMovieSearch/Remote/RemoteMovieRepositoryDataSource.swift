@@ -19,13 +19,11 @@ public class RemoteMovieRepositoryDataSource: MovieRepositoryDataSourceProtocol 
         self.searchResultMapper = searchResultMapper
     }
     
-    public func searchMoviesByTitle(_ searchText: String) -> Single<Array<SearchResult>> {
+    public func searchMoviesByTitle(_ searchText: String) -> Single<[SearchResult]> {
         return provider.rx.request(.movie(searchText))
             .map(RemoteSearchResults.self)
-            .map{ result -> Array<SearchResult> in
-                return result.results.map { item -> SearchResult in
-                    return self.searchResultMapper.map(from: item)
-                }
+            .map{ result -> [SearchResult] in
+                return result.results.map(self.searchResultMapper.map)
             }
     }
 }

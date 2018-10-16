@@ -9,7 +9,7 @@
 import Foundation
 
 public struct RemoteSearchResults: Decodable {
-    var results: Array<RemoteSearchResult>
+    var results: [RemoteSearchResult]
 }
 
 public struct RemoteSearchResult: Decodable {

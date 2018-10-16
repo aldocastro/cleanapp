@@ -15,7 +15,7 @@ public class MovieSearchPresenterFactory {
     }
 }
 
-public class MovieSearchPresenter: NSObject {
+public class MovieSearchPresenter {
     
     private let view: MovieSearchView
     private let searchMovieByTitleUseCase: SearchMovieByTitleUseCase
@@ -25,7 +25,6 @@ public class MovieSearchPresenter: NSObject {
         self.view = view
         self.searchMovieByTitleUseCase = searchMovieByTitleUseCase
         self.disposables = CompositeDisposable()
-        super.init()
     }
     
     public func onSearchTextChanged(_ text: String) {

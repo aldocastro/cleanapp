@@ -7,12 +7,12 @@
 		<key>CommonUI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>12</integer>
 		</dict>
 		<key>Commons.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>14</integer>
 		</dict>
 		<key>FeatureMovieSearch.xcscheme</key>
 		<dict>
@@ -22,7 +22,7 @@
 		<key>cleanapp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>13</integer>
 		</dict>
 	</dict>
 </dict>

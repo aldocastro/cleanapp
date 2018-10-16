@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 public protocol MovieRepositoryProtocol {
-    func searchMoviesByTitle(_ searchText: String) -> Single<Array<SearchResult>>
+    func searchMoviesByTitle(_ searchText: String) -> Single<[SearchResult]>
 }

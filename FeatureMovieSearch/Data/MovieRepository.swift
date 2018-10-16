@@ -17,7 +17,7 @@ public class MovieRepository: MovieRepositoryProtocol {
         self.remoteDataSource = remoteDataSource
     }
     
-    public func searchMoviesByTitle(_ searchText: String) -> Single<Array<SearchResult>> {
+    public func searchMoviesByTitle(_ searchText: String) -> Single<[SearchResult]> {
         return remoteDataSource.searchMoviesByTitle(searchText)
     }
 }
